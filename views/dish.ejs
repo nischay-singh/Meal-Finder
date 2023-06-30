@@ -1,0 +1,51 @@
+<%- include('partials/header'); -%>
+
+<div class="content">
+
+    <h2 class="text-center my-4 d-flex justify-content-center align-items-center"> <%= dish.title %></h2>
+    <ul class="d-flex justify-content-center">
+        <li class="dish-tag dish-tag-calories"><%= dish.nutrition.nutrients[0].amount %> kcal</li>
+        <% if(dish.cuisines){ %>
+        <% for(let cuisine of dish.cuisines){ %>
+        <li class="dish-tag dish-tag-cuisine"><%= cuisine %></li>
+        <% }} %>
+    </ul>
+
+    <div class="container-fluid" id="secondarySection">
+        <div class="row p-0">
+            <div class="col-md-6 order-md-1 order-2 col-12 p-0 m-0">
+                <div class="d-flex justify-content-center align-items-center p-5 h-100">
+                    <div class="ingredients ">
+                        <h3 class="m-3">Ingredients:</h3>
+                        <div class="ingredient-list">
+                            <ul>
+                                <% for(let ingredient of dish.extendedIngredients){ %>
+                                <li><%= ingredient.name[0].toUpperCase()+ingredient.name.substring(1) %>:
+                                    <%= ingredient.measures.us.amount %>
+                                    <%= ingredient.measures.us.unitLong %></li>
+
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 order-md-2 order-1 p-0 m-0 d-flex justify-content-center align-items-center">
+                <img src="<%= dish.image %>" alt="dish image" class="w-100 image">
+            </div>
+        </div>
+    </div>
+
+
+    <% if(dish.analyzedInstructions.length){ %>
+    <div class="container instructions mb-5 mt-4">
+        <h3>Instructions:</h3>
+        <% for(let instruction of dish.analyzedInstructions[0].steps){ %>
+        <p><span>STEP <%= instruction.number %>:</span> <%= instruction.step %></p>
+        <% } %>
+    </div>
+    <% } %>
+
+</div>
+
+<%- include('partials/footer'); -%>

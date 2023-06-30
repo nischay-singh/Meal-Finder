@@ -1,0 +1,300 @@
+<%- include('partials/header'); -%>
+
+<div class="row">
+    <div class="col-md-8 d-flex justify-content-center">
+        <div class="form">
+            <h1 class="text-center search-heading">Choose What You Want To Eat</h1>
+            <div class="container">
+                <form action="/search" method="POST" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="searchTerm" class="form-label">Search Keyword</label>
+                        <input type="text" name="query" placeholder="Eg. Chicken" class="form-control" id="searchTerm"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ingredients" class="form-label">Any Specific Ingredients? (Enter a comma separated
+                            list)</label>
+                        <input type="text" name="ingredients" placeholder="Eg. onions,chicken,bread etc."
+                            class="form-control" id="ingredients">
+                    </div>
+                    <div class="mb-3">
+                        <label for="calories" class="form-label" id="calorie-display">Maximum Calories: <span
+                                class="calorie-value">No
+                                Limit</span></label>
+                        <div class="d-flex align-items-center">
+                            <input type="range" name="calories" class="form-control d-inline" min="20" max="1250"
+                                id="calories" value="1250" step="10">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Cuisine</label>
+                        <div class="row">
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="nopref"
+                                        value="nopref" checked>
+                                    <label class="form-check-label" for="nopref">
+                                        No Preference
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="african"
+                                        value="african">
+                                    <label class="form-check-label" for="african">
+                                        African
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="asian"
+                                        value="asian">
+                                    <label class="form-check-label" for="asian">
+                                        Asian
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="American"
+                                        value="American">
+                                    <label class="form-check-label" for="American">
+                                        American
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="British"
+                                        value="British">
+                                    <label class="form-check-label" for="British">
+                                        British
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Cajun"
+                                        value="Cajun">
+                                    <label class="form-check-label" for="Cajun">
+                                        Cajun
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Caribbean"
+                                        value="Caribbean">
+                                    <label class="form-check-label" for="Caribbean">
+                                        Caribbean
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Chinese"
+                                        value="Chinese">
+                                    <label class="form-check-label" for="Chinese">
+                                        Chinese
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Eastern-European"
+                                        value="Eastern European">
+                                    <label class="form-check-label" for="Eastern-European">
+                                        Eastern European
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="European"
+                                        value="European">
+                                    <label class="form-check-label" for="European">
+                                        European
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="French"
+                                        value="French">
+                                    <label class="form-check-label" for="French">
+                                        French
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="German"
+                                        value="German">
+                                    <label class="form-check-label" for="German">
+                                        German
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Greek"
+                                        value="Greek">
+                                    <label class="form-check-label" for="Greek">
+                                        Greek
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Indian"
+                                        value="Indian">
+                                    <label class="form-check-label" for="Indian">
+                                        Indian
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Irish"
+                                        value="Irish">
+                                    <label class="form-check-label" for="Irish">
+                                        Irish
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Italian"
+                                        value="Italian">
+                                    <label class="form-check-label" for="Italian">
+                                        Italian
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Japanese"
+                                        value="Japanese">
+                                    <label class="form-check-label" for="Japanese">
+                                        Japanese
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Jewish"
+                                        value="Jewish">
+                                    <label class="form-check-label" for="Jewish">
+                                        Jewish
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Korean"
+                                        value="Korean">
+                                    <label class="form-check-label" for="Korean">
+                                        Korean
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Latin-American"
+                                        value="Latin American">
+                                    <label class="form-check-label" for="Latin-American">
+                                        Latin American
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Mediterranean"
+                                        value="Mediterranean">
+                                    <label class="form-check-label" for="Mediterranean">
+                                        Mediterranean
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Mexican"
+                                        value="Mexican">
+                                    <label class="form-check-label" for="Mexican">
+                                        Mexican
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Middle-Eastern"
+                                        value="Middle Eastern">
+                                    <label class="form-check-label" for="Middle-Eastern">
+                                        Middle Eastern
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Nordic"
+                                        value="Nordic">
+                                    <label class="form-check-label" for="Nordic">
+                                        Nordic
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Southern"
+                                        value="Southern">
+                                    <label class="form-check-label" for="Southern">
+                                        Southern
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Spanish"
+                                        value="Spanish">
+                                    <label class="form-check-label" for="Spanish">
+                                        Spanish
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Thai" value="Thai">
+                                    <label class="form-check-label" for="Thai">
+                                        Thai
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="cuisine" id="Vietnamese"
+                                        value="Vietnamese">
+                                    <label class="form-check-label" for="Vietnamese">
+                                        Vietnamese
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mb-4">
+                        <button class="btn btn-success btn-lg">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 d-md-flex justify-content-center align-items-center d-none">
+        <img src="/images/searchForm.jpg" alt="" class="search-image">
+    </div>
+</div>
+
+
+<script src="/scripts/rangeDisplay.js"></script>
+
+<%- include('partials/footer'); -%>

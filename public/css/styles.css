@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #f5d9d5;
+}
+
+/* NavBar */
+
+.navbar-brand,
+.navbar-brand:hover {
+  font-size: 2rem;
+  color: #e82070;
+  font-weight: 700;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: #e82070;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #e82070bd;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus {
+  border-color: #e82070 !important;
+  color: #e82070 !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(232, 32, 112, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.results-head {
+  font-weight: 700;
+}
+
+/* RESULTS */
+
+.results {
+  background-color: #f5d9d5;
+}
+
+.results .row {
+  font-family: "Poppins", sans-serif;
+  padding: 2%;
+}
+
+.thumb {
+  height: 200px;
+  border-radius: 10px;
+}
+
+.card:hover .thumb {
+  transform: scale(1.01);
+}
+
+.card {
+  margin-bottom: 1rem;
+  background-color: #ffc9c1;
+  height: 350px;
+}
+
+.card-body {
+  border-radius: 10px;
+  color: black;
+}
+
+.card-title {
+  margin: 1rem 0;
+  color: #ff2448;
+}
+
+.card:hover .card-title {
+  color: #fa5a75;
+}
+
+.card-link {
+  text-decoration: none;
+  color: black;
+}
+
+.no-results {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5d9d5;
+  padding: 2%;
+  text-align: center;
+}
+
+.no-results h2 {
+  font-size: 5rem;
+}
+
+/* DISH */
+
+.content {
+  font-family: "Poppins", sans-serif;
+}
+
+.dish-tag {
+  background-color: #e82070;
+  color: #f5d9d5;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  list-style-type: none;
+}
+
+.dish-tag-calories {
+  background-color: red;
+}
+
+.content h2 {
+  font-size: 3rem;
+  color: #6b1609;
+  font-weight: 700;
+}
+
+.content h3 {
+  font-size: 2.3rem;
+  color: #6b1609;
+}
+
+.instructions {
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+.instructions span {
+  font-size: 1.3rem;
+  color: #b11b57;
+  font-weight: 700;
+}
+
+.instructions p {
+  font-size: 1.1rem;
+}
+
+.ingredients {
+  margin: 2rem 5rem;
+}
+
+.ingredients ul {
+  font-size: 1.3rem;
+}
+
+footer {
+  background-color: #f5d9d5;
+  color: #b11b57;
+}
+
+/* Search */
+
+.search-heading {
+  font-size: 3rem;
+  color: #6b1609;
+  font-weight: 700;
+  margin: 2rem 0;
+}
+
+.form {
+  width: 80%;
+}
+
+.form label {
+  color: #b11b57;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.calorie-value {
+  color: #6b1609;
+}
+
+.left-value,
+.right-value {
+  color: #6b1609;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.form-check label.form-check-label {
+  color: #6b1609;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.search-image {
+  width: 90%;
+}
